@@ -16,6 +16,9 @@
   {{#each people}}
     <li>
       {{this.name}}
+            <form action="/people/{{this.id}}/tasks/delete" method="POST" style="display: inline">
+                  <input type="submit" value="delete">
+              </form>
       <ul>
         {{#if ../logged_in}}
           <li>
